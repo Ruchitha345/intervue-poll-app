@@ -1,0 +1,56 @@
+
+/* style.css */
+  
+:root {
+  --bg: #f5f5f8;
+  --card: #ffffff;
+  --accent: linear-gradient(90deg,#7b61ff,#5fc3ff);
+  --primary: #6b49ff;
+}
+
+body,html,#root { height:100%; margin:0; font-family: Inter, system-ui, Arial; background: var(--bg); color:#222; }
+
+.page-center {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+
+.card { background: var(--card); border-radius:10px; padding:20px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); width:520px; max-width:95%; margin:10px; }
+.card.small { width:420px; text-align:center; }
+
+.badge { display:inline-block; background:#6b49ff; color:white; padding:6px 10px; border-radius:20px; font-size:12px; margin-bottom:8px; }
+
+.role-card { text-align:center; padding:36px; }
+.role-options { display:flex; gap:18px; justify-content:center; margin-top:18px; }
+.role-options .option { border:1px solid #e9e9ef; padding:16px; border-radius:8px; width:200px; cursor:pointer; }
+.role-options .option:hover { transform:translateY(-4px); box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+
+.teacher-layout { display:flex; gap:18px; width:100%; max-width:1100px; }
+.left { width:36%; }
+.right { width:64%; }
+
+input[type="text"], input[type="number"] {
+  width:100%; padding:10px; margin-top:8px; margin-bottom:8px; border-radius:6px; border:1px solid #e3e3e8;
+}
+
+button { padding:8px 12px; border-radius:20px; background:#eee; border:none; cursor:pointer; }
+button.primary { background: linear-gradient(90deg,#7b61ff,#5fc3ff); color:white; border:none; padding:10px 16px; }
+.questions-list { display:flex; flex-direction:column; gap:8px; }
+.question-item { border:1px dashed #ececec; padding:8px; border-radius:8px; background:#fafafa; }
+
+.options-inline { color:#666; font-size:13px; margin-top:6px; }
+
+.results { margin-top:8px; }
+.result-row { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.result-label { width:160px; font-size:14px; }
+.bar { flex:1; background:#eee; height:10px; border-radius:6px; overflow:hidden; }
+.bar-inner { height:100%; background:linear-gradient(90deg,#6b49ff,#5fc3ff); transition: width 400ms ease; }
+.percent { width:42px; text-align:right; font-size:13px; color:#444; }
+.count { font-size:12px; color:#666; margin-left:6px; }
+
+.options-list { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+.option-btn { padding:8px 12px; border-radius:8px; border:1px solid #ddd; background:#fff; cursor:pointer; }
+.option-btn.selected { background:#6b49ff; color:white; border:none; } 
